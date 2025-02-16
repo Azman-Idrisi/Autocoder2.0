@@ -140,13 +140,13 @@ const Hero = () => {
     <div className="relative h-dvh w-screen overflow-x-hidden">
     {/* Marquee Text for Mobile */}
     <div className="absolute top-0 text-center w-full bg-transparent text-white py-2 overflow-hidden z-50 block md:hidden">
-      <div className="whitespace-nowrap text-sm animate-marquee font-bold">
+      <div className="whitespace-nowrap select-none text-sm animate-marquee font-bold">
         To go to the next part, take the cursor to the center and click. This website is best displayed on laptops.
       </div>
     </div>
   
     {/* Fixed Text for Laptops */}
-    <div className="hidden md:flex md:fixed md:top-0 md:left-1/2 md:-translate-x-1/2 md:bg-transparent md:text-white md:py-2 md:z-50 md:text-sm md:font-bold">
+    <div className="hidden md:flex select-none md:fixed md:top-0 md:left-1/2 md:-translate-x-1/2 md:bg-transparent md:text-white md:py-2 md:z-50 md:text-sm md:font-bold">
       To go to the next part, take the cursor to the center and click. This website is best displayed on laptops.
     </div>
 
