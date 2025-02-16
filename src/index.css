@@ -63,4 +63,19 @@ body {
   .hero-heading {
     @apply uppercase font-zentry font-black text-6xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[7rem];
   }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 10s linear infinite;
+  }
+
 }
