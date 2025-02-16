@@ -125,7 +125,9 @@ const Hero = () => {
     if (narrationAudioRef.current) {
       narrationAudioRef.current.src = getAudioSrc(currentIndex);
       narrationAudioRef.current.play().catch(() => {
-        console.log("Narration autoplay blocked, waiting for user interaction.");
+        console.log(
+          "Narration autoplay blocked, waiting for user interaction."
+        );
       });
     }
   }, [currentIndex]);
@@ -137,9 +139,9 @@ const Hero = () => {
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
       {/* Marquee Text */}
-      <div className="absolute top-0 left-0 w-full bg-transparent text-white py-2 overflow-hidden z-50">
-        <div className="animate-marquee whitespace-nowrap text-sm font-bold">
-          To go to the next part, take the cursor to the center and click.
+      <div className="absolute top-0 text-center w-full bg-transparent text-white py-2 overflow-hidden z-50">
+        <div className="whitespace-nowrap text-sm font-bold">
+          To go to the next part, take the cursor to the center and click. This website is best displayed on laptops.
         </div>
       </div>
 
@@ -219,13 +221,14 @@ const Hero = () => {
             {/* Scene Title & Description */}
             <div
               ref={textRef}
-              className="absolute lg:left-5 lg:top-40 top-[6.5rem] left-3 right-3 z-50 bg-white/20 p-5 rounded-lg backdrop-blur-md max-w-md"
+              className="absolute lg:left-5 lg:top-40 top-[6.5rem] left-3 right-3 z-50 bg-white/20 p-5 rounded-lg backdrop-blur-md max-w-md hidden lg:block"
             >
               <h2 className="text-white text-2xl font-bold">
                 {scenes[currentIndex - 1]?.title || "Unknown Scene"}
               </h2>
               <p className="text-white text-sm mt-2">
-                {scenes[currentIndex - 1]?.description || "No description available."}
+                {scenes[currentIndex - 1]?.description ||
+                  "No description available."}
               </p>
             </div>
           </div>
