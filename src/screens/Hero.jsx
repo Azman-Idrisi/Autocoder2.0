@@ -159,7 +159,7 @@ const Hero = () => {
 
       {/* Toggle Audio Button */}
       <Button
-        className="absolute top-5 right-5 z-50 p-2 bg-white rounded-md shadow-md"
+        className="absolute top-8 lg:top-5 right-5 z-50 p-2 bg-white rounded-md shadow-md"
         onClick={toggleAudio}
       >
         {isMusicPlaying ? "Pause Music" : "Play Music"}
