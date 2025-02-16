@@ -2,51 +2,51 @@ export const scenes = [
   {
     title: "Vanishing Cabinet’s Dark Past",
     description:
-      "A grand, gothic shot of Hogwarts at night, illuminated by the moonlight. The camera glides over the castle, focusing on the dimly lit corridors. Dust particles float in the air, and the sound of distant whispers echoes. The Vanishing Cabinet stands alone in a forgotten corner, its wooden frame cracked and glowing faintly with mysterious runes. Shadows move unnaturally in the dim light.",
+      "Long before the events of Harry Potter and the Chamber of Secrets, the Vanishing Cabinet at Hogwarts had a dark and mysterious history. This story takes place in the 1800s, during the time of Phineas Nigellus Black, one of the least popular Headmasters of Hogwarts. Known for his disdain for students and his obsession with maintaining the school’s reputation, Phineas becomes an unexpected obstacle in the story.",
   },
   {
     title: "Introduction to Eleanor Cresswell",
     description:
-      "A young, intelligent-looking Ravenclaw student, Eleanor Cresswell, sits alone in the Hogwarts library, her deep blue robes draped over her chair. Books are piled high around her, candlelight flickering on her face as she reads intensely. She brushes a stray strand of hair behind her ear, her eyes filled with curiosity. The camera zooms in as she places her hand on an old book, and a faint, glowing aura reveals the emotional echoes within.",
+      "The story begins with Eleanor Cresswell, a brilliant but reclusive Ravenclaw student. Eleanor is an orphan raised by her stern but loving grandmother, who once worked as a caretaker at Hogwarts. Eleanor’s grandmother often spoke of the school’s secrets, sparking her curiosity. Eleanor has a unique magical talent: she can sense the emotional echoes left behind in objects, a skill she uses to uncover hidden truths.",
   },
   {
     title: "Finding Cedric Plumpton’s Journal",
     description:
-      "Eleanor sneaks into the Restricted Section of the library, guided by torchlight. Dust swirls in the air as she pulls out an old, leather-bound journal from the shelf. The cover reads 'Cedric Plumpton' in faded gold letters. As she opens it, ghostly ink begins to appear on the pages, forming words on its own. A flashback overlay shows a young Cedric Plumpton writing feverishly, looking over his shoulder in fear.",
+      "One day, while exploring the Restricted Section of the library (thanks to a forged note from her best friend, Theodore Finch), Eleanor discovers an old, dusty journal belonging to Cedric Plumpton, a student who vanished over a century ago. The journal mentions a hidden passageway connected to the Vanishing Cabinet, rumored to be a portal to a secret magical realm. Intrigued, Eleanor begins to investigate.",
   },
   {
     title: "The Legend of Eldritch Holloway",
     description:
-      "A flashback to the 1700s: Eldritch Holloway, a rogue wizard, works in a dimly lit workshop filled with magical blueprints and strange artifacts. He places his hand on a pair of Vanishing Cabinets, activating them with a swirling vortex of dark energy. A magical mishap occurs—light flickers wildly, books fly off shelves, and Holloway screams as he is pulled into a shadowy void, disappearing forever.",
+      "She learns that the Vanishing Cabinet was once part of a pair, created by a rogue wizard named Eldritch Holloway, who dabbled in experimental magic. Holloway sought to create a bridge between worlds, but his experiments went awry, trapping him in the shadowy realm he created. The second cabinet was lost, and anyone who tried to use the Hogwarts cabinet would vanish without a trace. The journal hints that Cedric had discovered the location of the second cabinet but was never seen again.",
   },
   {
     title: "Eleanor and Theodore Discover the Second Cabinet",
     description:
-      "Eleanor and Theodore Finch creep through an abandoned, haunted-looking Plumpton Manor. The air is thick with dust, and cobwebs cover every corner. They push open a heavy wooden door, revealing the second Vanishing Cabinet. Its surface is covered in glowing runes, pulsing faintly. As Theodore brushes off the dust, his hand accidentally activates the magic, and he is suddenly pulled inside!",
+      "With the help of Theodore, a mischievous but loyal Hufflepuff with a knack for breaking rules (and a secret crush on Eleanor), they piece together clues hidden in the journal. They discover that the second cabinet is hidden in Plumpton Manor, an abandoned estate on the outskirts of Hogsmeade. The manor is said to be cursed, and locals whisper of shadowy figures seen prowling its grounds, One night, Eleanor and Theodore sneak out of Hogwarts under the cover of darkness, using a stolen map of secret passageways. At the manor, they find the second Vanishing Cabinet, covered in cobwebs and glowing faintly with residual magic. As they examine it, Theodore accidentally activates the cabinet and is pulled inside, vanishing before Eleanor’s eyes.",
   },
   {
     title: "The Shadow Realm : Eleanor’s Journey into the Unknown",
     description:
-      "Eleanor steps hesitantly into the Vanishing Cabinet, and in a flash of light, she appears in a strange, otherworldly dimension. The landscape is an eerie, floating void filled with broken staircases, shifting pathways, and echoes of lost souls. The air is thick with mist, and shadowy figures lurk in the distance. She turns and sees a young man in old Hogwarts robes—Cedric Plumpton, trapped for a century.",
+      "Desperate to save her friend, Eleanor steps into the cabinet and finds herself in a strange, shadowy realm—a place between worlds, where lost things and people end up. The realm is a surreal, ever-shifting landscape of fragmented memories and eerie silence. There, she discovers Cedric Plumpton, who has been trapped for over a century. Cedric explains that Holloway’s experiment created this unstable pocket dimension, and the shadowy creatures that inhabit it are fragments of Holloway’s shattered mind.",
   },
   {
     title: "Cedric Plumpton’s Revelation",
     description:
-      "Cedric leads Eleanor through the fragmented realm, explaining his fate. His face is solemn as he speaks of the Blackthorn family's betrayal. The camera cuts to a ghostly flashback: Cedric being tricked by dark-robed wizards, stepping into the Vanishing Cabinet, and disappearing forever. His voice echoes: “I was never meant to be found.",
+      "Eleanor also learns that Cedric is not just a lost student—he is the last heir of the Plumpton family, a once-powerful magical dynasty. His disappearance was orchestrated by the Blackthorn family, a rival clan who sought to claim the Plumpton family’s magical artifacts and legacy. Cedric’s journal was his attempt to leave a trail for someone to find him, Together, Eleanor, Cedric, and Theodore navigate the shadowy realm, facing terrifying creatures and solving magical puzzles to find a way back to Hogwarts. Along the way, Eleanor’s bond with Theodore deepens, and she begins to see him as more than just a friend. Cedric, meanwhile, struggles with guilt over his family’s dark past and his role in Holloway’s experiments.",
   },
   {
     title: "The Final Battle with Holloway’s Shadow",
     description:
-      "A towering, shadowy figure forms from the shifting void, its eyes burning with hollow rage. Holloway’s lost consciousness manifests as a dark entity, swirling with unstable magic. Eleanor stands firm, her wand raised, while Cedric and Theodore prepare for battle. Spells light up the darkness as they fight, dodging tendrils of shadow. Eleanor suddenly pauses, sensing something—Holloway’s grief. She reaches out, speaking softly, and the shadow hesitates.",
+      "In a climactic showdown, Eleanor confronts the remnants of Holloway’s consciousness, which takes the form of a towering, shadowy figure. Using her ability to sense emotional echoes, she discovers that Holloway’s experiment was driven by grief—he had lost his daughter and sought to bring her back from the afterlife. Eleanor uses this knowledge to appeal to the humanity still buried within Holloway, convincing him to help them repair the cabinets.",
   },
   {
     title: "The Goodbye – Cedric Stays Behind",
     description:
-      "As the portal stabilizes, Cedric steps back, shaking his head. “Someone has to keep this place from collapsing.” Eleanor's eyes fill with tears as she grips his hand. The music swells as he gives her a silver locket and whispers, “Tell the world my story.” The camera lingers on Eleanor’s face as the portal closes behind Cedric, leaving her and Theodore standing in silence.",
+      "With Holloway’s assistance, they stabilize the portal, but Cedric decides to stay behind to ensure the realm doesn’t collapse. In a tearful farewell, he gives Eleanor his family’s heirloom—a silver locket containing a portrait of his mother—as a token of gratitude. Eleanor and Theodore return to Hogwarts, where they are greeted as heroes.",
   },
   {
     title: "Epilogue – The Vanishing Cabinet Sealed Away",
     description:
-      "Back at Hogwarts, Phineas Nigellus Black watches as the Vanishing Cabinet is locked away, his expression unreadable. Meanwhile, Eleanor opens Cedric’s locket in her dormitory. Inside, a note shimmers into view: “The greatest magic is not in the spells we cast, but in the bonds we forge.” She smiles as Theodore nudges her playfully, hinting at their next adventure.",
+      "The story ends with Eleanor vowing to uncover more of Hogwarts’ hidden secrets, while Theodore teases her about their next adventure. The Vanishing Cabinet is sealed away, its dark history finally laid to rest. As Eleanor opens Cedric’s locket, she finds a note inside: “The greatest magic is not in the spells we cast, but in the bonds we forge.",
   },
 ];

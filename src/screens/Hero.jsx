@@ -10,18 +10,19 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [LoadedVideos, setLoadedVideos] = useState(0);
+  const [loadedVideos, setLoadedVideos] = useState(0);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
-  const totalVideos = scenes.length; // Total videos count
+  const totalVideos = scenes.length;
   const nextVideoRef = useRef(null);
   const audioRef = useRef(null);
+  const narrationAudioRef = useRef(null);
   const textRef = useRef(null);
 
+  // Ensure background audio plays on load
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.5; // Set volume
+      audioRef.current.volume = 0.1;
       audioRef.current.muted = true; // Start muted
       audioRef.current.play().catch(() => {
         console.log("Autoplay blocked. Waiting for user interaction.");
@@ -29,12 +30,7 @@ const Hero = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (LoadedVideos === totalVideos - 1) {
-      setIsLoading(false);
-    }
-  }, [LoadedVideos]);
-
+  // Fade-in animation for text
   useGSAP(
     () => {
       gsap.fromTo(
@@ -52,6 +48,7 @@ const Hero = () => {
     { dependencies: [currentIndex] }
   );
 
+  // Video click animation
   useGSAP(
     () => {
       if (hasClicked) {
@@ -63,7 +60,7 @@ const Hero = () => {
           height: "100%",
           duration: 1,
           ease: "power1.inOut",
-          onStart: () => nextVideoRef.current.play(),
+          onStart: () => nextVideoRef.current?.play(),
         });
         gsap.from("#current-video", {
           transformOrigin: "center center",
@@ -73,12 +70,10 @@ const Hero = () => {
         });
       }
     },
-    {
-      dependencies: [currentIndex],
-      revertOnUpdate: true,
-    }
+    { dependencies: [currentIndex], revertOnUpdate: true }
   );
 
+  // Video mask animation
   useGSAP(() => {
     gsap.set("#video-frame", {
       clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
@@ -98,17 +93,21 @@ const Hero = () => {
     });
   });
 
+  // Handle video loading
   const handleVideoLoad = () => {
     setLoadedVideos((prev) => prev + 1);
   };
 
+  // Get next video index
   const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
+  // Handle mini video click
   const handleMiniVdClick = () => {
     setHasClicked(true);
     setCurrentIndex(upcomingVideoIndex);
   };
 
+  // Toggle background music
   const toggleAudio = () => {
     if (audioRef.current) {
       if (isMusicPlaying) {
@@ -121,14 +120,35 @@ const Hero = () => {
     }
   };
 
+  // Play narration audio on scene change
+  useEffect(() => {
+    if (narrationAudioRef.current) {
+      narrationAudioRef.current.src = getAudioSrc(currentIndex);
+      narrationAudioRef.current.play().catch(() => {
+        console.log("Narration autoplay blocked, waiting for user interaction.");
+      });
+    }
+  }, [currentIndex]);
+
+  // Get video and audio sources
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
+  const getAudioSrc = (index) => `script/${index}.mp3`;
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
+      {/* Marquee Text */}
+      <div className="absolute top-0 left-0 w-full bg-transparent text-white py-2 overflow-hidden z-50">
+        <div className="animate-marquee whitespace-nowrap text-sm font-bold">
+          To go to the next part, take the cursor to the center and click.
+        </div>
+      </div>
+
       {/* Background Audio */}
       <audio ref={audioRef} loop>
         <source src="audio/music.mp3" type="audio/mp3" />
       </audio>
+
+      <audio ref={narrationAudioRef} />
 
       {/* Toggle Audio Button */}
       <Button
@@ -143,6 +163,7 @@ const Hero = () => {
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
       >
         <div>
+          {/* Mini Video Preview */}
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
               onClick={handleMiniVdClick}
@@ -160,6 +181,7 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* Next Video */}
           <video
             ref={nextVideoRef}
             src={getVideoSrc(currentIndex)}
@@ -170,6 +192,7 @@ const Hero = () => {
             onLoadedData={handleVideoLoad}
           />
 
+          {/* Main Video */}
           <video
             src={getVideoSrc(
               currentIndex === totalVideos - 1 ? 1 : currentIndex
@@ -182,6 +205,7 @@ const Hero = () => {
           />
         </div>
 
+        {/* Title & Description */}
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
           <b>STORYTELLING</b>
         </h1>
@@ -192,7 +216,7 @@ const Hero = () => {
               r<b>edef</b>i<b>ne</b>
             </h1>
 
-            {/* Display the title and description of the currently playing video */}
+            {/* Scene Title & Description */}
             <div
               ref={textRef}
               className="absolute lg:left-5 lg:top-40 top-[6.5rem] left-3 right-3 z-50 bg-white/20 p-5 rounded-lg backdrop-blur-md max-w-md"
@@ -201,8 +225,7 @@ const Hero = () => {
                 {scenes[currentIndex - 1]?.title || "Unknown Scene"}
               </h2>
               <p className="text-white text-sm mt-2">
-                {scenes[currentIndex - 1]?.description ||
-                  "No description available."}
+                {scenes[currentIndex - 1]?.description || "No description available."}
               </p>
             </div>
           </div>
