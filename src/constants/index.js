@@ -49,4 +49,9 @@ export const scenes = [
     description:
       "The story ends with Eleanor vowing to uncover more of Hogwarts’ hidden secrets, while Theodore teases her about their next adventure. The Vanishing Cabinet is sealed away, its dark history finally laid to rest. As Eleanor opens Cedric’s locket, she finds a note inside: “The greatest magic is not in the spells we cast, but in the bonds we forge.",
   },
+  {
+    title: "Thank You ❤️❤️❤️❤️",
+    description:
+      "Love you guys",
+  },
 ];
